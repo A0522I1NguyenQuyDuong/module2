@@ -10,7 +10,7 @@ public class PhuongTrinhBacHai {
         a = sc.nextDouble();
         b = sc.nextDouble();
         c = sc.nextDouble();
-        QuadraticEquation qe = new QuadraticEquation(a, b, c);
+        ss1_introduction_to_java.QuadraticEquation qe = new ss1_introduction_to_java.QuadraticEquation(a, b, c);
         if (qe.getDiscriminant()<0){
             System.out.println("Phương trình không có nghiệm nguyên");
         } else if (qe.getDiscriminant()==0) {

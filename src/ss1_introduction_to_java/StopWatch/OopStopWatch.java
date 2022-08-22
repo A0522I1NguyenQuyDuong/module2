@@ -25,7 +25,7 @@ public class OopStopWatch {
         LocalTime start = LocalTime.now();
             a = selectionSort(a);
             LocalTime end = LocalTime.now();
-            StopWatch sw = new StopWatch(start,end);
+            ss1_introduction_to_java.StopWatch sw = new ss1_introduction_to_java.StopWatch(start,end);
         System.out.println("Time :" + sw.getElapsedTime());
         for (int x : a){
             System.out.println(x);
