@@ -1,36 +1,63 @@
 package MoveablePoint;
 
 public class MoveablePoint extends Point {
-    private float z = 0.0f;
-    public MoveablePoint(float x, float y, float z){
-        super(x,y);
-        this.z = z;
+    private float xSpeed = 0.0f;
+    private float ySpeed = 0.0f;
+
+    public MoveablePoint( float x,float y,float xSpeed, float ySpeed) {
+        super (x,y);
+        this.xSpeed=xSpeed;
+        this.ySpeed=ySpeed;
     }
-    public MoveablePoint(){
+
+    public MoveablePoint() {
 
     }
 
-    public float getZ() {
-        return z;
+//    public MovablePoint(float[] a) {
+//        super(a[0],a[1] );
+//    }
+
+    public float getxSpeed() {
+        return xSpeed;
     }
 
-    public void setZ(float z) {
-        this.z = z;
+    public void setxSpeed(float xSpeed) {
+        this.xSpeed = xSpeed;
     }
-    public void setXYZ(float x, float y, float z){
-        setXY(x,y);
-        this.z = z;
+
+    public float getySpeed() {
+        return ySpeed;
     }
-    public float[] setXYZ(){
-        float[] test = new float[3];
-        test[0] = this.z;
-        test[1] = this.z;
-        test[2] = this.z;
+
+    public void setySpeed(float ySpeed) {
+        this.ySpeed = ySpeed;
+    }
+
+    public void setSpeed(float xSpeed, float ySpeed) {
+        this.xSpeed=xSpeed;
+        this.ySpeed=ySpeed;
+    }
+
+    public float[] getSpeed(){
+        float[] test = new float[2];
+        test[0]=this.xSpeed;
+        test[1]=this.ySpeed;
         return test;
     }
 
     @Override
     public String toString() {
-        return "("+getX()+","+getY()+","+getZ()+")";
+        return "MovablePoint{" +
+                "xSpeed=" + xSpeed +
+                ", ySpeed=" + ySpeed +
+                '}';
+    }
+
+    public MoveablePoint move(){
+        this.setX(this.getX()+this.xSpeed);
+        this.setY(this.getY()+this.ySpeed);
+        return this;
     }
 }
+

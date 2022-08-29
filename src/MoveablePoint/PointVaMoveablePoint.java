@@ -5,7 +5,7 @@ import com.sun.deploy.net.MessageHeader;
 public class PointVaMoveablePoint {
     public static void main(String[] args) {
         Point firstPoint = new Point(3, 4);
-        Point firstMoveablePoint = new MoveablePoint(4, 5, 6);
+        Point firstMoveablePoint = new MoveablePoint(4, 5, 6, 3);
 
 
         System.out.println(firstPoint.toString());
