@@ -8,12 +8,11 @@ public class Test {
         }
         Shape.printShape(shape);
         for (Shape x : shape) {
-            if (x instanceof Colorable) {
+            if (x instanceof Colorable)
                 ((Colorable) x).howtoColor();
             }
         }
 
-    }
 
     static Shape getRandomShape() {
         int radom = (int) (Math.round(Math.random() * 2));
@@ -23,7 +22,7 @@ public class Test {
             case 1:
                 return new Rectangle(10, 20) {
 
-                  
+
                 };
             default:
                 return new Circle(10);
